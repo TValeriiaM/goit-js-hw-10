@@ -55,11 +55,11 @@ function convertMs(ms) {
 }
 
 const calendar = flatpickr('#datetime-picker', options);
+startButton.disabled = true;
 
 startButton.addEventListener('click', event => {
   const countdown = setInterval(() => {
     timeDifference = userSelectedDate - new Date();
-    event.preventDefault();
     inputDateTime.disabled = true;
     startButton.disabled = true;
 
